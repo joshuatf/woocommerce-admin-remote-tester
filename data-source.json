@@ -11,10 +11,8 @@
         "image": "https://www.payfast.co.za/assets/images/payfast_logo_colour.svg",
         "is_visible": [
             {
-                "type": "option",
-                "option_name": "woocommerce_currency",
-                "value": "USD",
-                "default": "USD",
+                "type": "base_location_country",
+                "value": "ZA",
                 "operation": "="
             }
         ],
