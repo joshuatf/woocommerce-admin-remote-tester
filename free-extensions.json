@@ -1,11 +1,12 @@
 [
   {
     "key": "woocommerce-payments",
+    "section": "primary",
     "locales": [
       {
         "locale": "en_US",
         "title": "WooCommerce Payments",
-        "description": "Accept credit cards with WooCommerce Payments"
+        "description": "Accept credit cards with {{link}}WooCommerce Payments{{/link}}"
       }
     ],
     "is_visible": [
@@ -46,6 +47,28 @@
             "type": "base_location_country",
             "value": "NZ",
             "operation": "="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "facebook-for-woocommerce",
+    "section": "secondary",
+    "locales": [
+      {
+        "locale": "en_US",
+        "title": "Facebook",
+        "description": "Market with {{link}}Facebook{{/link}}"
+      }
+    ],
+    "is_visible": [
+      {
+        "type": "not",
+        "operand": [
+          {
+            "type": "plugins_activated",
+            "plugins": ["facebook-for-woocommerce"]
           }
         ]
       }
