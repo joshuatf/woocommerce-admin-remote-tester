@@ -1,74 +1,92 @@
 [
   {
-    "key": "woocommerce-payments",
-    "section": "primary",
+    "key": "basics",
     "locales": [
       {
         "locale": "en_US",
-        "title": "WooCommerce Payments",
-        "description": "Accept credit cards with {{link}}WooCommerce Payments{{/link}}"
+        "title": "Get the basics"
       }
     ],
-    "is_visible": [
+    "plugins": [
       {
-        "type": "or",
-        "operands": [
+        "key": "woocommerce-payments",
+        "locales": [
           {
-            "type": "base_location_country",
-            "value": "US",
-            "operation": "="
-          },
+            "locale": "en_US",
+            "description": "Accept credit cards with {{link}}WooCommerce Payments{{/link}}"
+          }
+        ],
+        "is_visible": [
           {
-            "type": "base_location_country",
-            "value": "PR",
-            "operation": "="
-          },
-          {
-            "type": "base_location_country",
-            "value": "AU",
-            "operation": "="
-          },
-          {
-            "type": "base_location_country",
-            "value": "CA",
-            "operation": "="
-          },
-          {
-            "type": "base_location_country",
-            "value": "GB",
-            "operation": "="
-          },
-          {
-            "type": "base_location_country",
-            "value": "IE",
-            "operation": "="
-          },
-          {
-            "type": "base_location_country",
-            "value": "NZ",
-            "operation": "="
+            "type": "or",
+            "operands": [
+              {
+                "type": "base_location_country",
+                "value": "US",
+                "operation": "="
+              },
+              {
+                "type": "base_location_country",
+                "value": "PR",
+                "operation": "="
+              },
+              {
+                "type": "base_location_country",
+                "value": "AU",
+                "operation": "="
+              },
+              {
+                "type": "base_location_country",
+                "value": "CA",
+                "operation": "="
+              },
+              {
+                "type": "base_location_country",
+                "value": "GB",
+                "operation": "="
+              },
+              {
+                "type": "base_location_country",
+                "value": "IE",
+                "operation": "="
+              },
+              {
+                "type": "base_location_country",
+                "value": "NZ",
+                "operation": "="
+              }
+            ]
           }
         ]
       }
     ]
   },
   {
-    "key": "facebook-for-woocommerce",
-    "section": "secondary",
+    "key": "grow",
     "locales": [
       {
         "locale": "en_US",
-        "title": "Facebook",
-        "description": "Market with {{link}}Facebook{{/link}}"
+        "title": "Grow your store"
       }
     ],
-    "is_visible": [
+    "plugins": [
       {
-        "type": "not",
-        "operand": [
+        "key": "facebook-for-woocommerce",
+        "locales": [
           {
-            "type": "plugins_activated",
-            "plugins": ["facebook-for-woocommerce"]
+            "locale": "en_US",
+            "description": "Market with {{link}}Facebook{{/link}}"
+          }
+        ],
+        "is_visible": [
+          {
+            "type": "not",
+            "operand": [
+              {
+                "type": "plugins_activated",
+                "plugins": ["facebook-for-woocommerce"]
+              }
+            ]
           }
         ]
       }
