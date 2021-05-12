@@ -1,6 +1,6 @@
 {
 	"name": "woocommerce-admin-remote-tester",
-	"title": "remote-payments-tester",
+	"title": "woocommerce-admin-remote-tester",
 	"license": "GPL-3.0-or-later",
 	"version": "0.1.0",
 	"description": "remote-payments-tester",
