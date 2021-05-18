@@ -1,95 +1,325 @@
 [
-  {
-    "key": "basics",
-    "locales": [
-      {
-        "locale": "en_US",
-        "title": "Get the basics"
-      }
-    ],
-    "plugins": [
-      {
-        "key": "woocommerce-payments",
-        "locales": [
-          {
-            "locale": "en_US",
-            "description": "Accept credit cards with {{link}}WooCommerce Payments{{/link}}"
-          }
-        ],
-        "is_visible": [
-          {
-            "type": "or",
-            "operands": [
-              {
-                "type": "base_location_country",
-                "value": "US",
-                "operation": "="
-              },
-              {
-                "type": "base_location_country",
-                "value": "PR",
-                "operation": "="
-              },
-              {
-                "type": "base_location_country",
-                "value": "AU",
-                "operation": "="
-              },
-              {
-                "type": "base_location_country",
-                "value": "CA",
-                "operation": "="
-              },
-              {
-                "type": "base_location_country",
-                "value": "GB",
-                "operation": "="
-              },
-              {
-                "type": "base_location_country",
-                "value": "IE",
-                "operation": "="
-              },
-              {
-                "type": "base_location_country",
-                "value": "NZ",
-                "operation": "="
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "grow",
-    "locales": [
-      {
-        "locale": "en_US",
-        "title": "Grow your store"
-      }
-    ],
-    "plugins": [
-      {
-        "key": "facebook-for-woocommerce",
-        "locales": [
-          {
-            "locale": "en_US",
-            "description": "Market with {{link}}Facebook{{/link}}"
-          }
-        ],
-        "is_visible": [
-          {
-            "type": "not",
-            "operand": [
-              {
-                "type": "plugins_activated",
-                "plugins": ["facebook-for-woocommerce"]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+	{
+		"key": "basics",
+		"locales": [
+			{
+				"locale": "en_US",
+				"title": "Get the basics"
+			}
+		],
+		"plugins": [
+			{
+				"key": "woocommerce-payments",
+				"product": "woocommerce-payments",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Accept credit cards with {{link}}WooCommerce Payments{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "or",
+						"operands": [
+							{
+								"type": "base_location_country",
+								"value": "US",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "PR",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "AU",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "CA",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "GB",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "IE",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "NZ",
+								"operation": "="
+							}
+						]
+					},
+					{
+						"type": "option",
+						"transformers": [
+							{
+								"use": "dot_notation",
+								"arguments": {
+									"path": "industry"
+								}
+							},
+							{
+								"use": "array_column",
+								"arguments": {
+									"key": "slug"
+								}
+							},
+							{
+								"use": "array_search",
+								"arguments": {
+									"value": "cbd-other-hemp-derived-products"
+								}
+							}
+						],
+						"option_name": "woocommerce_onboarding_profile",
+						"value": "cbd-other-hemp-derived-products",
+						"default": "",
+						"operation": "!="
+					}
+				]
+			},
+			{
+				"key": "woocommerce-services:shipping",
+				"product": "shipping",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Print shipping labels with {{link}}WooCommerce Shipping{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "base_location_country",
+						"value": "US",
+						"operation": "="
+					},
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["woocommerce-services"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "woocommerce-services:tax",
+				"product": "tax",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Get automated sales tax with {{link}}WooCommerce Tax{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "or",
+						"operands": [
+							{
+								"type": "base_location_country",
+								"value": "US",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "FR",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "GB",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "DE",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "CA",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "AU",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "GR",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "BE",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "PT",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "DK",
+								"operation": "="
+							},
+							{
+								"type": "base_location_country",
+								"value": "SE",
+								"operation": "="
+							}
+						]
+					},
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["woocommerce-services"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "jetpack",
+				"product": "jetpack",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Enhance speed and security with {{link}}Jetpack{{/link}}"
+					}
+				]
+			}
+		]
+	},
+	{
+		"key": "grow",
+		"locales": [
+			{
+				"locale": "en_US",
+				"title": "Grow your store"
+			}
+		],
+		"plugins": [
+			{
+				"key": "mailpoet",
+				"product": "mailpoet",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Level up your email marketing with {{link}}MailPoet{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["mailpoet"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "facebook-for-woocommerce",
+				"product": "facebook",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Market with {{link}}Facebook{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["facebook-for-woocommerce"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "google-listings-and-ads",
+				"product": "google-listings-and-ads",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Drive sales with {{link}}Google Listings and Ads{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["google-listings-and-ads"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "mailchimp-for-woocommerce",
+				"product": "mailchimp-for-woocommerce",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Contact customers with {{link}}Mailchimp{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["mailchimp-for-woocommerce"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "creative-mail-by-constant-contact",
+				"product": "creative-mail-for-woocommerce",
+				"locales": [
+					{
+						"locale": "en_US",
+						"description": "Emails made easy with {{link}}Creative Mail{{/link}}"
+					}
+				],
+				"is_visible": [
+					{
+						"type": "not",
+						"operand": [
+							{
+								"type": "plugins_activated",
+								"plugins": ["creative-mail-for-woocommerce"]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
 ]
