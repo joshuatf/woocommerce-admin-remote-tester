@@ -3,7 +3,7 @@
  */
 import {
 	WooRemotePayment,
-	WooRemotePaymentSettings,
+	WooRemotePaymentForm,
 } from '@woocommerce/components';
 import { registerPlugin } from '@wordpress/plugins';
 
@@ -18,11 +18,11 @@ registerPlugin( 'wc-remote-payments', {
 					</>
 				) }
 			</WooRemotePayment>
-			<WooRemotePaymentSettings id="payfast">
-				{ ( { defaultSettings: DefaultSettings, markConfigured } ) => (
+			<WooRemotePaymentForm id="payfast">
+				{ ( { defaultForm: DefaultForm, markConfigured } ) => (
 					<>
 						<h4>Custom Sub-Heading</h4>
-						<DefaultSettings
+						<DefaultForm
 							onSubmit={ () => {
 								console.info(
 									'Custom update function, marking configured'
@@ -32,7 +32,7 @@ registerPlugin( 'wc-remote-payments', {
 						/>
 					</>
 				) }
-			</WooRemotePaymentSettings>
+			</WooRemotePaymentForm>
 		</>
 	),
 } );

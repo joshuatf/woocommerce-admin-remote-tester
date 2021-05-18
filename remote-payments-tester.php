@@ -16,7 +16,6 @@ class RemotePaymentsTester {
     public function __construct() {
         add_action( 'plugins_loaded', array( __CLASS__, 'init' ) );
         add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_extension_register_script' ) );
-
     }
 
     /**

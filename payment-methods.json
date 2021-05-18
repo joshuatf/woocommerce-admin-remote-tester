@@ -1,93 +1,93 @@
 [
-  {
-    "key": "payfast",
-    "locales": [
-      {
-        "locale": "en_US",
-        "title": "payfastOrSlow",
-        "content": "The PayFast extension for WooCommerce enables you to accept payments by Credit Card and EFT via one of South Africa’s most popular payment gateways. No setup fees or monthly subscription costs.  Selecting this extension will configure your store to use South African rands as the selected currency."
-      }
-    ],
-    "image": "https://www.payfast.co.za/assets/images/payfast_logo_colour.svg",
-    "is_visible": [
-      {
-        "type": "base_location_country",
-        "value": "ZA",
-        "operation": "="
-      }
-    ],
-    "plugins": ["woocommerce-payfast-gateway"],
-    "is_configured": [
-      {
-        "type": "option",
-        "option_name": "woocommerce_payfast_settings",
-        "value": "false",
-        "default": "false",
-        "operation": "!="
-      },
-      {
-        "type": "option",
-        "index": "merchant_id",
-        "option_name": "woocommerce_payfast_settings",
-        "value": "false",
-        "default": "false",
-        "operation": "!="
-      },
-      {
-        "type": "option",
-        "index": "merchant_key",
-        "option_name": "woocommerce_payfast_settings",
-        "value": "false",
-        "default": "false",
-        "operation": "!="
-      },
-      {
-        "type": "option",
-        "index": "pass_phrase",
-        "option_name": "woocommerce_payfast_settings",
-        "value": "false",
-        "default": "false",
-        "operation": "!="
-      }
-    ],
-    "fields": [
-      {
-        "name": "merchant_id",
-        "option": "woocommerce_payfast_settings/merchant_id",
-        "locales": [
-          {
-            "locale": "en_US",
-            "label": "Merchant ID"
-          }
-        ]
-      },
-      {
-        "name": "merchant_key",
-        "option": "woocommerce_payfast_settings/merchant_key",
-        "locales": [
-          {
-            "locale": "en_US",
-            "label": "Merchant Key"
-          }
-        ]
-      },
-      {
-        "name": "pass_phrase",
-        "option": "woocommerce_payfast_settings/pass_phrase",
-        "locales": [
-          {
-            "locale": "en_US",
-            "label": "Passphrase"
-          }
-        ]
-      },
-      {
-        "name": "woocommerce_currency",
-        "value": "ZAR",
-        "type": "hidden"
-      }
-    ],
-    "api_details_url": "https://www.payfast.co.za/",
-    "manage_url": "admin.php?page=wc-settings&tab=checkout&section=payfast"
-  }
+	{
+		"key": "payfast",
+		"locales": [
+			{
+				"locale": "en_US",
+				"title": "payfastOrSlow",
+				"content": "The PayFast extension for WooCommerce enables you to accept payments by Credit Card and EFT via one of South Africa’s most popular payment gateways. No setup fees or monthly subscription costs.  Selecting this extension will configure your store to use South African rands as the selected currency."
+			}
+		],
+		"image": "https://www.payfast.co.za/assets/images/payfast_logo_colour.svg",
+		"is_visible": [
+			{
+				"type": "base_location_country",
+				"value": "ZA",
+				"operation": "="
+			}
+		],
+		"plugins": [ "woocommerce-payfast-gateway" ],
+		"is_configured": [
+			{
+				"type": "option",
+				"option_name": "woocommerce_payfast_settings",
+				"value": "false",
+				"default": "false",
+				"operation": "!="
+			},
+			{
+				"type": "option",
+				"index": "merchant_id",
+				"option_name": "woocommerce_payfast_settings",
+				"value": "false",
+				"default": "false",
+				"operation": "!="
+			},
+			{
+				"type": "option",
+				"index": "merchant_key",
+				"option_name": "woocommerce_payfast_settings",
+				"value": "false",
+				"default": "false",
+				"operation": "!="
+			},
+			{
+				"type": "option",
+				"index": "pass_phrase",
+				"option_name": "woocommerce_payfast_settings",
+				"value": "false",
+				"default": "false",
+				"operation": "!="
+			}
+		],
+		"fields": [
+			{
+				"name": "merchant_id",
+				"option": "woocommerce_payfast_settings/merchant_id",
+				"locales": [
+					{
+						"locale": "en_US",
+						"label": "Merchant ID"
+					}
+				]
+			},
+			{
+				"name": "merchant_key",
+				"option": "woocommerce_payfast_settings/merchant_key",
+				"locales": [
+					{
+						"locale": "en_US",
+						"label": "Merchant Key"
+					}
+				]
+			},
+			{
+				"name": "pass_phrase",
+				"option": "woocommerce_payfast_settings/pass_phrase",
+				"locales": [
+					{
+						"locale": "en_US",
+						"label": "Passphrase"
+					}
+				]
+			},
+			{
+				"name": "woocommerce_currency",
+				"value": "ZAR",
+				"type": "hidden"
+			}
+		],
+		"api_details_url": "https://www.payfast.co.za/",
+		"manage_url": "admin.php?page=wc-settings&tab=checkout&section=payfast"
+	}
 ]
