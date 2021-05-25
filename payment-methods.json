@@ -89,5 +89,26 @@
 		],
 		"api_details_url": "https://www.payfast.co.za/",
 		"manage_url": "admin.php?page=wc-settings&tab=checkout&section=payfast"
+	},
+	{
+		"key": "woocommerce_payments",
+		"locales": [
+			{
+				"locale": "en_US",
+				"title": "WCPay",
+				"content": "WCPay yay."
+			}
+		],
+		"image": "https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce.svg",
+		"is_visible": [
+			{
+				"type": "base_location_country",
+				"value": "US",
+				"operation": "="
+			}
+		],
+		"plugins": [ "woocommerce-payments" ],
+		"api_details_url": "https://www.woocommerce.com/",
+		"manage_url": "admin.php?page=wc-settings&tab=checkout&section=wcpay"
 	}
 ]
