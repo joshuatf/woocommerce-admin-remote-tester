@@ -1,7 +1,10 @@
 /**
  * External dependencies
  */
-import { WooRemotePayment, WooRemotePaymentForm } from '@woocommerce/tasks';
+import {
+	WooRemotePayment,
+	WooRemotePaymentForm,
+} from '@woocommerce/onboarding';
 import { registerPlugin } from '@wordpress/plugins';
 
 registerPlugin( 'wc-remote-payments', {
