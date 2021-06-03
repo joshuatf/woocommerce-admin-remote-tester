@@ -17,77 +17,29 @@
 			}
 		],
 		"plugins": [ "woocommerce-payfast-gateway" ],
-		"is_configured": [
-			{
-				"type": "option",
-				"option_name": "woocommerce_payfast_settings",
-				"value": "false",
-				"default": "false",
-				"operation": "!="
-			},
-			{
-				"type": "option",
-				"index": "merchant_id",
-				"option_name": "woocommerce_payfast_settings",
-				"value": "false",
-				"default": "false",
-				"operation": "!="
-			},
-			{
-				"type": "option",
-				"index": "merchant_key",
-				"option_name": "woocommerce_payfast_settings",
-				"value": "false",
-				"default": "false",
-				"operation": "!="
-			},
-			{
-				"type": "option",
-				"index": "pass_phrase",
-				"option_name": "woocommerce_payfast_settings",
-				"value": "false",
-				"default": "false",
-				"operation": "!="
-			}
-		],
-		"fields": [
-			{
-				"name": "merchant_id",
-				"option": "woocommerce_payfast_settings/merchant_id",
-				"locales": [
-					{
-						"locale": "en_US",
-						"label": "Merchant ID"
-					}
-				]
-			},
-			{
-				"name": "merchant_key",
-				"option": "woocommerce_payfast_settings/merchant_key",
-				"locales": [
-					{
-						"locale": "en_US",
-						"label": "Merchant Key"
-					}
-				]
-			},
-			{
-				"name": "pass_phrase",
-				"option": "woocommerce_payfast_settings/pass_phrase",
-				"locales": [
-					{
-						"locale": "en_US",
-						"label": "Passphrase"
-					}
-				]
-			},
-			{
-				"name": "woocommerce_currency",
-				"value": "ZAR",
-				"type": "hidden"
-			}
-		],
 		"api_details_url": "https://www.payfast.co.za/",
 		"manage_url": "admin.php?page=wc-settings&tab=checkout&section=payfast"
+	},
+	{
+		"key": "woocommerce_payments",
+		"locales": [
+			{
+				"locale": "en_US",
+				"title": "WooCommerce Payments",
+				"content": "WCPay yay.",
+				"description": "Try the new way to get paid. Securely accept credit and debit cards on your site. Manage transactions without leaving your WordPress dashboard. Only with WooCommerce Payments."
+			}
+		],
+		"image": "https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce.svg",
+		"is_visible": [
+			{
+				"type": "base_location_country",
+				"value": "US",
+				"operation": "="
+			}
+		],
+		"plugins": [ "woocommerce-payments" ],
+		"api_details_url": "https://woocommerce.com/payments/",
+		"manage_url": "admin.php?page=wc-settings&tab=checkout&section=wcpay"
 	}
 ]

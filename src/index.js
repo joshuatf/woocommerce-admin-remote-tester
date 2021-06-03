@@ -4,7 +4,7 @@
 import {
 	WooRemotePayment,
 	WooRemotePaymentForm,
-} from '@woocommerce/components';
+} from '@woocommerce/onboarding';
 import { registerPlugin } from '@wordpress/plugins';
 
 registerPlugin( 'wc-remote-payments', {
