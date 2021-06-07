@@ -3,7 +3,7 @@
  * Plugin Name: Remote Payments Tester
  */
 
-use Automattic\WooCommerce\Admin\Features\RemotePaymentMethods\Init as RemotePaymentMethods;
+use Automattic\WooCommerce\Admin\Features\PaymentGatewaySuggestions\Init as RemotePaymentMethods;
 use Automattic\WooCommerce\Admin\Features\RemoteFreeExtensions\Init as RemoteFreeExtensions;
 
 /**
@@ -77,11 +77,11 @@ class RemotePaymentsTester {
      * Initialize payment methods.
      */
     public static function initPaymentMethods() {
-        if ( ! class_exists( 'Automattic\WooCommerce\Admin\Features\RemotePaymentMethods\Init' ) ) {
+        if ( ! class_exists( 'Automattic\WooCommerce\Admin\Features\PaymentGatewaySuggestions\Init' ) ) {
             return;
         }
 
-        add_filter( 'woocommerce_admin_remote_payment_methods_data_sources', array( __CLASS__, 'filter_payment_methods_sources' ) );
+        add_filter( 'woocommerce_admin_payment_gateway_suggestions_data_sources', array( __CLASS__, 'filter_payment_methods_sources' ) );
         // Force the JSON data to be refetched every time.
         add_filter( 'transient_' . RemotePaymentMethods::SPECS_TRANSIENT_NAME, '__return_false' );
     }
