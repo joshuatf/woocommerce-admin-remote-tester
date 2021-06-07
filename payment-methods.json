@@ -1,6 +1,6 @@
 [
 	{
-		"key": "payfast",
+		"id": "payfast",
 		"locales": [
 			{
 				"locale": "en_US",
@@ -21,7 +21,7 @@
 		"manage_url": "admin.php?page=wc-settings&tab=checkout&section=payfast"
 	},
 	{
-		"key": "woocommerce_payments",
+		"id": "woocommerce_payments",
 		"locales": [
 			{
 				"locale": "en_US",
